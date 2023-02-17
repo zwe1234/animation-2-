@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 Bouning</title>
+<style type="text/css">
+	.ball{
+		display: inline-block;
+		margin-top: 200px;
+		text-align: center;
+		width: 50px; height: 50px;
+		border-radius: 50%;
+		background-color: lightgreen;
+		border: 1px solid #999;
+	}
+	.I{
+		animation-name: bounceI;
+		animation-duration: 0.5s;
+		animation-direction: alternate;
+		animation-iteration-count: infinite;
+
+	}
+	.Me{
+		animation: bounceMe 0.5s alternate infinite;
+	}
+	.My{
+		animation: bounceMy 0.5s alternate infinite;
+	}
+	@keyframes bounceI{
+       0%{transform: translateY(1px);}
+       100%{transform: translateY(-150px);}
+	}
+	@keyframes bounceMe{
+       0%{transform: translateY(-150px);}
+       100%{transform: translateY(0px);}
+	}
+	@keyframes bounceMy{
+       0%{transform: translateY(0px);}
+       100%{transform: translateY(-150px);}
+	}
+</style>
+</head>
+<body>
+	<div class="ball I">I</div>
+	<div class="ball Me">Me</div>
+	<div class="ball My">My</div>
+</body>
+</html>
